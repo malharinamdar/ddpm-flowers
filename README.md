@@ -76,17 +76,6 @@ of images used, so they should only be compared when measured the same way.
 3. Settings: **GPU T4 ×2**, internet on.
 4. **Save Version → Save & Run All**. Results are written to `/kaggle/working/`.
 
-## Notes
-
-- Code comments and the experiment options that were not used in each run were removed for readability; the code is
-  otherwise as it was run. Printed outputs are kept.
-- Three runs stopped with an error after their main work was saved (a library import order issue, a two-GPU sampling
-  issue and a GPU out-of-memory error). Each is marked in the notebook, and the step was redone in the next notebook.
-- The original notebook is not copied here; it is in [Neelesh-Gupta/DDPM-Flowers](https://github.com/Neelesh-Gupta/DDPM-Flowers).
-  `1_reference_model/01_reference_notebook_rerun.ipynb` is that notebook run unchanged, plus one cell at the end.
-- Model weights and the raw generated images are not included because of their size.
-- Each setting was trained once (no repeated training seeds), and there was no full hyperparameter search.
-
 ## Credits
 
 - Original model and notebook: [Neelesh-Gupta/DDPM-Flowers](https://github.com/Neelesh-Gupta/DDPM-Flowers)
