@@ -1,0 +1,65 @@
+[
+  {
+    "stage": "A_sampler",
+    "ckpt": "ema.pt",
+    "steps": 100,
+    "eta": 0.0,
+    "fid_2k": 29.20700454711914,
+    "kid_2k": 0.006964349653571844,
+    "minutes": 6.0
+  },
+  {
+    "stage": "A_sampler",
+    "ckpt": "ema.pt",
+    "steps": 100,
+    "eta": 1.0,
+    "fid_2k": 28.519033432006836,
+    "kid_2k": 0.006672568153589964,
+    "minutes": 6.3
+  },
+  {
+    "stage": "A_sampler",
+    "ckpt": "ema.pt",
+    "steps": 250,
+    "eta": 0.0,
+    "fid_2k": 29.853336334228516,
+    "kid_2k": 0.0077102589420974255,
+    "minutes": 14.1
+  },
+  {
+    "stage": "A_sampler",
+    "ckpt": "ema.pt",
+    "steps": 250,
+    "eta": 1.0,
+    "fid_2k": 27.289697647094727,
+    "kid_2k": 0.005971760489046574,
+    "minutes": 14.1
+  },
+  {
+    "stage": "B_ckpt",
+    "ckpt": "ema.pt",
+    "steps": 100,
+    "eta": 1.0,
+    "fid_2k": 28.519033432006836,
+    "kid_2k": 0.006672568153589964,
+    "minutes": 6.3
+  },
+  {
+    "stage": "B_ckpt",
+    "ckpt": "weights_ep100.pt",
+    "steps": 100,
+    "eta": 1.0,
+    "fid_2k": 32.68971633911133,
+    "kid_2k": 0.009573759511113167,
+    "minutes": 6.4
+  },
+  {
+    "stage": "B_ckpt",
+    "ckpt": "weights_ep150.pt",
+    "steps": 100,
+    "eta": 1.0,
+    "fid_2k": 30.212615966796875,
+    "kid_2k": 0.008169799111783504,
+    "minutes": 6.4
+  }
+]

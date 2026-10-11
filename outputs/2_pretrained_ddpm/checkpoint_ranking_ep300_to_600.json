@@ -1,0 +1,42 @@
+[
+  {
+    "stage": "B_ckpt",
+    "ckpt": "ep300",
+    "path": "/kaggle/input/notebooks/malharinamdar/ddpm-task/G_finetune/ema.pt",
+    "steps": 100,
+    "eta": 1.0,
+    "fid_2k": 28.51896095275879,
+    "kid_2k": 0.006705126725137234,
+    "minutes": 5.1
+  },
+  {
+    "stage": "B_ckpt",
+    "ckpt": "ep400",
+    "path": "/kaggle/working/G_continue/cont_ep400.pt",
+    "steps": 100,
+    "eta": 1.0,
+    "fid_2k": 28.158124923706055,
+    "kid_2k": 0.006651353556662798,
+    "minutes": 5.3
+  },
+  {
+    "stage": "B_ckpt",
+    "ckpt": "ep500",
+    "path": "/kaggle/working/G_continue/cont_ep500.pt",
+    "steps": 100,
+    "eta": 1.0,
+    "fid_2k": 30.510093688964844,
+    "kid_2k": 0.00841632392257452,
+    "minutes": 5.4
+  },
+  {
+    "stage": "B_ckpt",
+    "ckpt": "ep600",
+    "path": "/kaggle/working/G_continue/cont_ep600.pt",
+    "steps": 100,
+    "eta": 1.0,
+    "fid_2k": 30.23662567138672,
+    "kid_2k": 0.00843946635723114,
+    "minutes": 5.4
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "run": "E_long",
+  "cfg": {
+    "epochs": 200,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "warmup_steps": 500,
+    "grad_clip": 1.0,
+    "ema_decay": 0.9995,
+    "schedule": "linear",
+    "arch": "orig",
+    "dropout": 0.0,
+    "amp": true,
+    "seed": 0,
+    "save_every": 50,
+    "eval_n": 2000,
+    "eval_seeds": [
+      0
+    ],
+    "eval_bs": 250
+  },
+  "params_M": 25.3,
+  "train_minutes": 41.8,
+  "total_nan_steps": 0,
+  "gpu": "Tesla T4",
+  "evaluated": "ema",
+  "runs": [
+    {
+      "seed": 0,
+      "fid": 56.827003479003906,
+      "kid": 0.02851671166718006,
+      "kid_std": 0.001455644378438592,
+      "sample_minutes": 20.5
+    }
+  ],
+  "nn_dist_gen": 10.559292793273926,
+  "nn_dist_real": 11.142486572265625,
+  "fid_mean": 56.827003479003906,
+  "fid_std": 0.0,
+  "kid_mean": 0.02851671166718006,
+  "kid_std_seeds": 0.0
+}
