@@ -10,15 +10,15 @@ Kaggle GPUs (Tesla T4). Every notebook here was run on Kaggle; the outputs it pr
 All numbers compare generated images with all 4,317 real images at 32×32. FID@2k uses 2,000 generated images
 (mean ± std over 5 separate sets where shown). Lower is better for FID and KID.
 
-| Model | Sampler | Params | FID@2k | KID@2k | FID@10k | FID∞ | Precision / Recall |
-|---|---|---|---|---|---|---|---|
-| Original notebook (20 epochs) | original, 999 steps | 25.3M | 248.5 | 0.168 | – | – | – / 0.02 |
-| Original notebook (20 epochs) | clipped, 250 steps | 25.3M | 172.2 | 0.126 | – | – | – |
-| Original architecture, retrained 200 epochs | original, 999 steps | 25.3M | 56.8 | 0.0285 | – | – | – |
-| Pretrained DDPM, fine-tuned 300 epochs | original, 999 steps | 35.7M | 35.2 ± 1.0 | 0.0136 | 25.7 | 22.9 | 0.78 / 0.50 |
-| **Pretrained DDPM, fine-tuned 400 epochs** | **clipped, 250 steps** | 35.7M | **27.2 ± 0.4** | **0.0059** | **17.7** | **15.4** | **0.81 / 0.52** |
-| Stable Diffusion v1.5 + LoRA | DPM-Solver++, 25 steps | 860M + 6.4M | 33.1 ± 0.4 | 0.0083 | 23.2 | 20.4 | 0.71 / 0.56 |
-| Real images vs real images | – | – | 22.6 | ≈ 0 | – | – | – |
+| Model | Sampler | Params | FID@2k | KID@2k | FID@10k | Precision / Recall |
+|---|---|---|---|---|---|---|
+| Original notebook (20 epochs) | original, 999 steps | 25.3M | 248.5 | 0.168 | – | – / 0.02 |
+| Original notebook (20 epochs) | clipped, 250 steps | 25.3M | 172.2 | 0.126 | – | – |
+| Original architecture, retrained 200 epochs | original, 999 steps | 25.3M | 56.8 | 0.0285 | – | – |
+| Pretrained DDPM, fine-tuned 300 epochs | original, 999 steps | 35.7M | 35.2 ± 1.0 | 0.0136 | 25.7 | 0.78 / 0.50 |
+| **Pretrained DDPM, fine-tuned 400 epochs** | **clipped, 250 steps** | 35.7M | **27.2 ± 0.4** | **0.0059** | **17.7** | **0.81 / 0.52** |
+| Stable Diffusion v1.5 + LoRA | DPM-Solver++, 25 steps | 860M + 6.4M | 33.1 ± 0.4 | 0.0083 | 23.2 | 0.71 / 0.56 |
+| Real images vs real images | – | – | 22.6 | ≈ 0 | – | – |
 
 The last row is a reference point: two halves of the real dataset (2,158 images each) compared with each other.
 FID stays well above zero even between two sets of real images of this size, and FID values change with the number
@@ -60,8 +60,7 @@ of images used, so they should only be compared when measured the same way.
 - **FID@2k** (main comparison): 2,000 generated images vs all 4,317 real images, same code for every model
   (`torchmetrics`, standard Inception weights).
 - **KID**: like FID but unbiased with few images.
-- **FID at 2k–10k and FID∞**: FID drops as more generated images are used, so we also report FID@10k and the value
-  extrapolated to infinitely many images (fit of FID against 1/N).
+- **FID at 2k–10k**: FID drops as more generated images are used, so we also report FID at 4k–10k generated images.
 - **Precision / recall**: how realistic the images are (precision) and how much of the real variety they cover (recall).
 - **Inception Score**: reported for completeness; it is weak for flowers (real images only score 6.29).
 - **Memorisation check**: the closest training image to each of 64 generated images, compared with how close real
@@ -95,5 +94,5 @@ of images used, so they should only be compared when measured the same way.
 - Pretrained models: [google/ddpm-cifar10-32](https://huggingface.co/google/ddpm-cifar10-32),
   [stable-diffusion-v1-5](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5)
 - Methods: DDPM (Ho et al., 2020), DDIM (Song et al., 2021), FID (Heusel et al., 2017), KID (Bińkowski et al., 2018),
-  precision/recall (Kynkäänniemi et al., 2019), FID∞ (Chong & Forsyth, 2020), LoRA (Hu et al., 2022),
+  precision/recall (Kynkäänniemi et al., 2019), sample-size effects in FID (Chong & Forsyth, 2020), LoRA (Hu et al., 2022),
   latent diffusion (Rombach et al., 2022)
