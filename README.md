@@ -21,7 +21,8 @@ All numbers compare generated images with all 4,317 real images at 32×32. FID@2
 | Real images vs real images | – | – | 22.6 | ≈ 0 | – | – | – |
 
 The last row is a reference point: two halves of the real dataset (2,158 images each) compared with each other.
-With only 4,317 real images, FID cannot go near 0 even for a perfect model.
+FID stays well above zero even between two sets of real images of this size, and FID values change with the number
+of images used, so they should only be compared when measured the same way.
 
 ## What we did
 
