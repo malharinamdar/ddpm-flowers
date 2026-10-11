@@ -24,7 +24,7 @@ The last row is a reference point: two halves of the real dataset (2,158 images 
 FID stays well above zero even between two sets of real images of this size, and FID values change with the number
 of images used, so they should only be compared when measured the same way.
 
-## What we did
+## What was done
 
 1. **Reran the original notebook unchanged** and scored it. Its published run had turned to NaN (fp16 mixed precision);
    our rerun trained normally and gives FID@2k 248.5.
